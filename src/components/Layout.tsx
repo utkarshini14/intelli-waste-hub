@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { 
   Camera, 
   MessageSquare, 
-  GameController, 
+  Gamepad, 
   ShoppingBag, 
   Menu, 
   X, 
@@ -45,7 +45,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     { to: '/', icon: Home, label: 'Home' },
     { to: '/recognition', icon: Camera, label: 'Image Recognition' },
     { to: '/chatbot', icon: MessageSquare, label: 'Smart Assistant' },
-    { to: '/game', icon: GameController, label: 'Waste Game' },
+    { to: '/game', icon: Gamepad, label: 'Waste Game' },
     { to: '/marketplace', icon: ShoppingBag, label: 'Marketplace' },
   ];
 

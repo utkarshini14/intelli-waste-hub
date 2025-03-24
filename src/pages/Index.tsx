@@ -1,9 +1,8 @@
-
 import React from 'react';
 import Layout from '../components/Layout';
 import Hero from '../components/home/Hero';
 import FeatureCard from '../components/home/FeatureCard';
-import { Camera, MessageSquare, GameController, ShoppingBag } from 'lucide-react';
+import { Camera, MessageSquare, Gamepad, ShoppingBag } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -41,7 +40,7 @@ const Index = () => {
             <FeatureCard
               title="Educational Waste Game"
               description="Test and improve your knowledge of waste sorting through our interactive game."
-              icon={<GameController size={24} className="text-white" />}
+              icon={<Gamepad size={24} className="text-white" />}
               to="/game"
               color="bg-intelliwaste-yellow"
             />

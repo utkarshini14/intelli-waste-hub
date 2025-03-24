@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight,
   Camera,
   MessageSquare,
-  GameController,
+  Gamepad,
   ShoppingBag
 } from 'lucide-react';
 
@@ -66,7 +65,7 @@ const Hero: React.FC = () => {
             to="/chatbot"
           />
           <FeatureHighlight 
-            icon={<GameController className="text-white" size={20} />} 
+            icon={<Gamepad className="text-white" size={20} />} 
             title="Waste Game" 
             color="bg-intelliwaste-yellow"
             to="/game"

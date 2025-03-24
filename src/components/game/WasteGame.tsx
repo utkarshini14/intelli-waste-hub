@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Trophy, RefreshCw, Trash, Recycle, Info } from 'lucide-react';
+import { Trophy, RefreshCw, Trash, Recycle, Info, Check, X } from 'lucide-react';
 
 interface WasteItem {
   id: number;
@@ -82,14 +81,12 @@ const WasteGame: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState(15);
   const [gameActive, setGameActive] = useState(false);
   
-  // Initialize the game
   useEffect(() => {
     if (gameActive && !gameOver) {
       pickRandomItem();
     }
   }, [gameActive, gameOver]);
   
-  // Timer countdown
   useEffect(() => {
     if (!gameActive || gameOver || showFeedback) return;
     
@@ -108,13 +105,11 @@ const WasteGame: React.FC = () => {
   }, [gameActive, gameOver, showFeedback]);
   
   const pickRandomItem = () => {
-    // If all items have been used, reset
     if (usedItems.length >= wasteItems.length) {
       endGame();
       return;
     }
     
-    // Find an unused item
     const availableItems = wasteItems.filter(item => !usedItems.includes(item.id));
     const randomItem = availableItems[Math.floor(Math.random() * availableItems.length)];
     
@@ -143,7 +138,6 @@ const WasteGame: React.FC = () => {
     setShowFeedback(true);
     setUsedItems(prev => [...prev, currentItem.id]);
     
-    // Move to next round after delay
     setTimeout(() => {
       if (round >= maxRounds) {
         endGame();
@@ -174,7 +168,6 @@ const WasteGame: React.FC = () => {
   return (
     <div className="w-full max-w-3xl mx-auto p-6 rounded-xl bg-white shadow-glass-sm border border-intelliwaste-gray-medium">
       {!gameActive ? (
-        // Game start screen
         <div className="text-center py-8">
           <div className="mb-6 w-20 h-20 rounded-full bg-intelliwaste-blue/10 flex items-center justify-center mx-auto">
             <Trophy size={40} className="text-intelliwaste-blue" />
@@ -191,7 +184,6 @@ const WasteGame: React.FC = () => {
           </button>
         </div>
       ) : gameOver ? (
-        // Game over screen
         <div className="text-center py-8">
           <div className="mb-6 w-20 h-20 rounded-full bg-intelliwaste-yellow/20 flex items-center justify-center mx-auto">
             <Trophy size={40} className="text-intelliwaste-yellow" />
@@ -218,7 +210,6 @@ const WasteGame: React.FC = () => {
           </button>
         </div>
       ) : (
-        // Active game screen
         <div>
           <div className="flex justify-between items-center mb-6">
             <div className="text-sm font-medium text-intelliwaste-gray-dark">

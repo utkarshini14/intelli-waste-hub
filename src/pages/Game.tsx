@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import WasteGame from '../components/game/WasteGame';
-import { GameController, Trophy, Book } from 'lucide-react';
+import { Gamepad, Trophy, Book } from 'lucide-react';
 
 const Game = () => {
   return (
@@ -50,7 +50,7 @@ const Game = () => {
               </div>
               <div className="p-6 rounded-xl bg-white border border-intelliwaste-gray-medium shadow-glass-sm text-center">
                 <div className="w-16 h-16 rounded-full bg-intelliwaste-yellow/10 flex items-center justify-center text-intelliwaste-yellow mx-auto mb-4">
-                  <GameController size={32} />
+                  <Gamepad size={32} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Engaging Education</h3>
                 <p className="text-intelliwaste-gray-dark">
@@ -71,10 +71,14 @@ const Game = () => {
               className="inline-block px-6 py-3 bg-intelliwaste-blue text-white rounded-lg font-medium shadow-md hover:bg-intelliwaste-blue-dark transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                window.scrollTo({
-                  top: document.querySelector('#game')?.offsetTop || 0,
-                  behavior: 'smooth'
-                });
+                const gameElement = document.querySelector('#game');
+                if (gameElement) {
+                  const top = gameElement.getBoundingClientRect().top + window.pageYOffset;
+                  window.scrollTo({
+                    top,
+                    behavior: 'smooth'
+                  });
+                }
               }}
             >
               Play Now
