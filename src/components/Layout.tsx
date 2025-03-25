@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -50,7 +49,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-green-200">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-glass-sm border-b border-intelliwaste-gray-medium">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -148,7 +147,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </span>
             </div>
             <div className="text-sm text-intelliwaste-gray-dark">
-              &copy; {new Date().getFullYear()} INTELLIwaste. All rights reserved.
+              &copy; {new Date().getFullYear()} INTELLIwaste. All rights reserved. Made by Utk & Kj
             </div>
           </div>
         </div>
