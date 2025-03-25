@@ -49,7 +49,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-green-200">
+    <div className="min-h-screen flex flex-col bg-yellow-700">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-glass-sm border-b border-intelliwaste-gray-medium">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">

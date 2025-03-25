@@ -24,11 +24,11 @@ const Hero: React.FC = () => {
             Intelligent Waste Management
           </span>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-slide-down" style={{ animationDelay: '0.4s' }}>
-            Transform How You <span className="bg-gradient-to-r from-intelliwaste-blue to-intelliwaste-blue-light bg-clip-text text-transparent">Manage Waste</span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-intelliwaste-gray-dark mb-10 animate-slide-down" style={{ animationDelay: '0.6s' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-slide-down" 
+    style={{ animationDelay: '0.4s' }}>
+  Transform How You <span style={{ color: '#DFD3C3' }}>Manage Waste</span>
+</h1>
+          <p className="text-lg md:text-xl mb-10 animate-slide-down" style={{ color: '#FFDDAB', animationDelay: '0.6s' }}>
             INTELLIwaste provides cutting-edge technology to help you identify, sort, and manage waste efficiently — turning environmental challenges into opportunities.
           </p>
           
