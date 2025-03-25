@@ -54,10 +54,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-glass-sm border-b border-intelliwaste-gray-medium">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <Recycle size={28} className="text-intelliwaste-blue" />
-            <span className="text-xl font-semibold bg-gradient-to-r from-intelliwaste-blue to-intelliwaste-blue-light bg-clip-text text-transparent">
-              INTELLI<span className="font-light">waste</span>
-            </span>
+            <Recycle size={28} style={{ color: "#859F3D" }} />
+            <span className="text-xl font-semibold" style={{ color: '#859F3D' }}>
+  INTELLI<span className="font-light">waste</span>
+</span>
           </Link>
           
           {/* Desktop Navigation */}

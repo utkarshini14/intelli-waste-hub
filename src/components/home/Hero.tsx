@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
       
       <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block px-4 py-2 rounded-full bg-intelliwaste-blue/10 text-intelliwaste-blue text-sm font-medium mb-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <span className="inline-block px-4 py-2 rounded-full bg-intelliwaste-blue/10 text-intelliwaste-blue text-sm font-medium mb-6 animate-fade-in" style={{ color: '#859F3D', animationDelay: '0.2s' }}>
             Intelligent Waste Management
           </span>
           
