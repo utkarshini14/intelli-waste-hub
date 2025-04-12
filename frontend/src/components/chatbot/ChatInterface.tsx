@@ -257,7 +257,7 @@ const ChatInterface: React.FC = () => {
           </button>
         </div>
         <div className="mt-2 text-xs text-intelliwaste-gray-dark text-center">
-          Ask about recycling, waste reduction, or proper disposal methods
+          Ask about recycling, waste reduction, or proper disposal methods.
         </div>
       </div>
     </div>
